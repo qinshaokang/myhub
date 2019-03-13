@@ -1,0 +1,189 @@
+{% extends 'portal/tpl_base.html' %}
+{% block cssstyle %}
+    <style>
+        footer {
+            background: #333;
+            color: #eee;
+            font-size: 11px;
+            padding: 20px;
+        }
+        ul.unstyled {
+            list-style: none;
+            padding: 0;
+        }
+        footer h6 {
+            color: white;
+        }
+    </style>
+{% endblock %}
+{% block top %}
+    <div class="page-header">
+        <h1>河北瑞丰建筑材料有限公司欢迎您</h1>
+    </div>
+    <div class="custom-notice">
+        <i class="icon-notice"></i>
+        <marquee class="noticeText ng-binding" direction="left" behavior="alternate" scrollamount="100" scrolldelay="1000" loop="5" width="100%" onmouseover="this.stop();" onmouseout="this.start();"  style="width: 100%;">充值公告：首充100送1元</marquee>
+    </div>
+{% endblock %}
+{% block nav %}
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">网站首页</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">新闻中心</a></li>
+                    <li><a href="#">设备展示</a></li>
+                    <li><a href="#">产品展示</a></li>
+                    <li><a href="#">荣誉资质</a></li>
+                    <li><a href="#">在线留言</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="请输入产品名称">
+                    </div>
+                    <button type="submit" class="btn btn-default">站内搜索</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+{% endblock %}
+{% block carousel %}
+    <div id="myCarousel" class="carousel slide" data-ride=“carousel>
+        <!-- 轮播（Carousel）指标 -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552498794768&di=df765350bfb7c3304383edad418dc215&imgtype=jpg&src=http%3A%2F%2Fimg1.imgtn.bdimg.com%2Fit%2Fu%3D2052580386%2C1758275809%26fm%3D214%26gp%3D0.jpg" alt="Third slide">
+            </div>
+            <div class="item">
+                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552498632072&di=41a43d10c4aab35dc28407013182a114&imgtype=0&src=http%3A%2F%2Fpic.90sjimg.com%2Fbanner%2F44%2F99%2F59%2F3PPSmlKDGbcEJetn9E1a.jpg" alt="First slide">
+            </div>
+            <div class="item">
+                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552498632099&di=e298ff18fd3d7729108853d124018425&imgtype=0&src=http%3A%2F%2Fwww-file.huawei.com%2F-%2Fmedia%2FCORPORATE%2FImages%2FFuiosnSolar%2FTrowbridge-new.jpg" alt="Second slide">
+            </div>
+            <div class="item">
+                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552498540893&di=a50424bd76ac8fd309e986280eb79ed8&imgtype=0&src=http%3A%2F%2Fimg1.tuniucdn.com%2Fsite%2Ffile%2Fzt%2Fbrand%2Fimages%2Fbanner01.jpg" alt="Third slide">
+            </div>
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+{% endblock %}
+{% block main_content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>新闻中心</h2>
+                <h5>我的照片:</h5>
+                <div class="fakeimg">这边插入图像</div>
+                <p>关于我的介绍..</p>
+
+            </div>
+            <div class="col-sm-4">
+                <h2>关于我们</h2>
+                <h5>副标题</h5>
+                <div class="fakeimg">图像</div>
+                <p>一些文本..</p>
+                <p>菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！</p>
+                <br>
+            </div>
+            <div class="col-sm-4">
+                <h2>董事长致辞</h2>
+                <h5>我的照片:</h5>
+                <div class="fakeimg">这边插入图像</div>
+                <p>关于我的介绍..</p>
+            </div>
+            <div class="col-sm-8">
+                <h2>产品展示</h2>
+                <p>描述文本。</p>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#">链接 1</a></li>
+                    <li><a href="#">链接 2</a></li>
+                    <li><a href="#">链接 3</a></li>
+                </ul>
+                <hr class="hidden-sm hidden-md hidden-lg">
+            </div>
+            <div class="col-sm-4">
+                <h2>联系我们</h2>
+                <h5>电话：13121306299</h5>
+                <div class="fakeimg">图像</div>
+                <p>一些文本..</p>
+                <p>菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block foot %}
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <h6>Copyright &copy;新浪体育</h6>
+                </div>
+
+                <div class="col-sm-4">
+                    <h6>关于我们</h6>
+                    <p>
+                        河北瑞丰建筑材料有限公司是一家主打纤维素的厂家，2018年完成10个亿的融资，并计划2020年上市。
+                    </p>
+                </div>
+
+                <div class="col-sm-2">
+                    <h6>导航</h6>
+                    <ul class="unstyled">
+                        <li><a href="">主页</a></li>
+                        <li><a href="">服务</a></li>
+                        <li><a href="">链接</a></li>
+                        <li><a href="">联系我们</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-2">
+                    <h6>Follow us</h6>
+                    <ul class="unstyled">
+                        <li><a href="">微博</a></li>
+                        <li><a href="">微信</a></li>
+                        <li><a href="">来往</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-2">
+                    <h6>本网站由<span class="glyphicon glyphicon-heart"></span>Darren制作</h6>
+                </div>
+            </div>
+        </div>
+    </footer><!--页脚结束-->
+{% endblock %}
+{% block jsscript %}
+    <script>
+        $('.carousel').carousel({
+            interval: 2000
+        })
+    </script>
+{% endblock %}
+
+
+
+
