@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'lo7ce6@w(g(!0on&04l)v&dsy^_3(2pzeb4w8=&jod=3^z35@a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1'
@@ -126,3 +126,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 sys.path.insert(0,os.path.join(BASE_DIR,"apps"))
+
+MEDIA_URL='/uploads/'
+MEDIA_ROOT=os.path.join(BASE_DIR, 'uploads').replace('\\', '/')

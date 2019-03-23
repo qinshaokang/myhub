@@ -17,7 +17,7 @@
     </style>
 {% endblock %}
 {% block top %}
-    <div class="page-header">
+    <div class="page-header" >
         <h1 style="margin-left: 5%">河北瑞峰建筑材料有限公司欢迎您</h1>
         <p class="text-center">联系电话：15030182176</p>
     </div>
@@ -97,41 +97,44 @@
         <div class="row">
             <div class="col-sm-4">
                 <h2>新闻中心</h2>
-                <h5>我的照片:</h5>
-                <div class="fakeimg">这边插入图像</div>
-                <p>关于我的介绍..</p>
+                <ul class="list-group col-md-10">
+                    {% for news in news_list%}
+                        <li class="list-group-item">
+                            <span class="badge">{{ news.create_time|date:"Y/m/d" }}</span>
+                            <a>{{ news.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
 
             </div>
             <div class="col-sm-4">
                 <h2>关于我们</h2>
-                <h5>副标题</h5>
-                <div class="fakeimg">图像</div>
-                <p>一些文本..</p>
-                <p>菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！</p>
+                <p>{{ introduction.content|linebreaksbr|truncatewords:"3" }}</p>
                 <br>
             </div>
             <div class="col-sm-4">
                 <h2>董事长致辞</h2>
-                <h5>我的照片:</h5>
-                <div class="fakeimg">这边插入图像</div>
-                <p>关于我的介绍..</p>
+                <p>{{ speech.content|linebreaksbr|truncatewords:"3" }}.</p>
             </div>
+        </div>
+        <div class="row">
             <div class="col-sm-8">
                 <h2>产品展示</h2>
-                <p>描述文本。</p>
-                <ul class="nav nav-pills nav-stacked">
-                    <li class="active"><a href="#">链接 1</a></li>
-                    <li><a href="#">链接 2</a></li>
-                    <li><a href="#">链接 3</a></li>
-                </ul>
+                {% for product in product_list %}
+                    <div class="col-sm-3">
+                        <img src="{{ product.picture.url }}" class="img-rounded img-responsive">
+                    </div>
+
+                {% endfor %}
                 <hr class="hidden-sm hidden-md hidden-lg">
             </div>
             <div class="col-sm-4">
                 <h2>联系我们</h2>
-                <h5>电话：13121306299</h5>
-                <div class="fakeimg">图像</div>
-                <p>一些文本..</p>
-                <p>菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！</p>
+                <h5>电话：{{ contactus.telephone }}</h5>
+                <h5>QQ：{{ contactus.qq }}</h5>
+                <h5>微信：{{ contactus.wechat }}</h5>
+                <h5>邮箱：{{ contactus.email }}</h5>
+                <h5>地址：{{ contactus.address }}</h5>
             </div>
         </div>
     </div>
