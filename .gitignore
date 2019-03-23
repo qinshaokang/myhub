@@ -1,4 +1,4 @@
 *.pyc
 .idea/
-**/migrations/
+**/migrations/0*
 uploads/
