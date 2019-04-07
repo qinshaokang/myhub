@@ -2,3 +2,4 @@
 .idea/
 **/migrations/0*
 uploads/
+venv/
